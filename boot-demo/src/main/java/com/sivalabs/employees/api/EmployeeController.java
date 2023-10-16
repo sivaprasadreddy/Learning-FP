@@ -2,7 +2,9 @@ package com.sivalabs.employees.api;
 
 import com.sivalabs.employees.domain.EmployeeService;
 import com.sivalabs.employees.domain.EmployeesPayload;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -14,7 +16,7 @@ class EmployeeController {
     }
 
     @PostMapping("/api/employees/import")
-    void importEmployees(EmployeesPayload employeesPayload) {
+    void importEmployees(@RequestBody @Valid EmployeesPayload employeesPayload) {
         employeeService.importEmployees(employeesPayload);
     }
 }
