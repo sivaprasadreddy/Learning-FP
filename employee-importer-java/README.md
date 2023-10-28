@@ -47,9 +47,9 @@ Irrespective of the approach, what I would do is break down the problem into sma
 2. Validate the List<Employee> objects.
 3. If validation fails, return error response.
 4. for each employee <- employees
-   4.1. Check if employee email exists in the database.
-   4.1. if employee email exists in the database, update the employee record in the database.
-   4.2. Otherwise, update the employee record in the database.
+   * Check if employee email exists in the database.
+   * if employee email exists in the database, update the employee record in the database.
+   * Otherwise, update the employee record in the database.
 
 Among those subtasks, some can be implemented as pure-functions and some will be functions with side-effects.
 
